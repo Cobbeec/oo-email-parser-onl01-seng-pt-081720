@@ -1,20 +1,17 @@
 class EmailAddressParser 
-  attr_accessor :email_address 
-  @@all = []
-
-  def self.all
-    @@all
-  end
+attr_accessor :name, :emails 
 
 
-def initalize 
-   @email = Array.new 
- end 
- 
- def self.parse 
-  new_email= email.new
-  @@all << new_email
-  new_email 
-
+def initalize (emails)
+  @name = name 
+  @emails = emails 
 end 
+
+def parse 
+  emails.split.collect do |address|
+    address.split(',')
+  end 
+  flatten.unique
+end 
+
 end 
