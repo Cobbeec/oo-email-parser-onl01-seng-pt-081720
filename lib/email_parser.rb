@@ -13,4 +13,4 @@ class EmailParser
   end 
 end 
 
-new_email = 
+new_email = EmailParser.new 
