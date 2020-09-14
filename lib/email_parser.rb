@@ -12,3 +12,6 @@ class EmailParser
     .flatten.uniq 
   end 
 end 
+emails1 = "asd@qw.com, per@er.org, Zaza@sugar.net"
+parser1 = EmailParser.new(emails1)
+parser1.parse 
