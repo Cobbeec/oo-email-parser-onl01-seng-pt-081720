@@ -1,14 +1,14 @@
 class EmailAddressParser 
-attr_accessor :name, :emails 
+attr_accessor :name, :csv_emails 
 
 
-def initalize (emails)
+def initalize (csv_emails)
   @name = name 
-  @emails = emails 
+  @csv_emails = csv_emails 
 end 
 
 def parse 
-  emails.split.collect do |address|
+  csv_emails.split.collect do |address|
     address.split(',')
   end 
   flatten.unique
